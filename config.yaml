@@ -1,0 +1,6 @@
+OpenAI:
+    llm: "gpt-4.1-mini"
+    embedding: "text-embedding-3-small"
+
+ChromaDB:
+    collection_name: "paper_rag"
