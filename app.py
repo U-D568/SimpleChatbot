@@ -57,13 +57,6 @@ if file_uploader is not None and st.session_state.pdf_file != file_uploader.name
         # get embeds
         embeds = get_embeddings(new_chunks, openai_client)
 
-        # remove all items in the collection
-        # collections = chroma_client.list_collections()
-        # collection_names = [c.name for c in collections]
-        # if "paper_rag" in collection_names:
-        #     chroma_client.delete_collection("paper_rag")
-        # collection = chroma_client.get_or_create_collection("paper_rag")
-
         # insert new items
         collection.add(documents=chunks, embeddings=embeds, ids=ids)
 
